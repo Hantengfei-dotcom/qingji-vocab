@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12324b">
+  <meta name="description" content="四六级与雅思英语单词练习：单词卡、词义选择、拼写练习。">
+  <title>轻记单词｜四六级与雅思</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="site-header">
+      <div class="brand"><span class="brand-icon" aria-hidden="true">Aa</span><span>轻记单词</span></div>
+      <div class="header-note">每天一点，记得更牢</div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">ENGLISH VOCABULARY</p>
+          <h1 id="hero-title">打开就能背，<br><em>随时接着学。</em></h1>
+          <p class="hero-description">四六级综合词库与雅思分章节词库。看卡片、选词义、练拼写，进度自动留在当前浏览器。</p>
+        </div>
+        <div class="hero-mark" aria-hidden="true"><span>word</span><strong>记</strong><small>learn · recall · repeat</small></div>
+      </section>
+
+      <section class="workspace" aria-label="背单词练习区">
+        <div class="workspace-top">
+          <div>
+            <p class="section-kicker">选择词库</p>
+            <div class="book-tabs" role="group" aria-label="词库">
+              <button class="book-tab active" type="button" data-book="cet">大学英语四六级 <span id="cet-count">—</span></button>
+              <button class="book-tab" type="button" data-book="ielts">雅思分章节 <span id="ielts-count">—</span></button>
+            </div>
+          </div>
+          <div class="progress-box">
+            <div class="progress-head"><span>已掌握</span><strong id="progress-number">0 / 0</strong></div>
+            <div class="progress-track"><div id="progress-fill"></div></div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <label class="select-wrap" id="chapter-wrap">章节
+            <select id="chapter-select" aria-label="选择雅思章节"><option value="all">全部章节</option></select>
+          </label>
+          <label class="search-wrap">查找单词
+            <input id="search-input" type="search" placeholder="输入英文或中文词义" autocomplete="off">
+          </label>
+          <button id="random-button" class="quiet-button" type="button">随机一个</button>
+        </div>
+
+        <div class="mode-tabs" role="group" aria-label="练习方式">
+          <button class="mode-tab active" type="button" data-mode="card">单词卡</button>
+          <button class="mode-tab" type="button" data-mode="quiz">词义选择</button>
+          <button class="mode-tab" type="button" data-mode="spell">拼写练习</button>
+        </div>
+
+        <div class="session-line"><span id="session-label">正在载入词库…</span><span id="position-label"></span></div>
+        <div id="exercise" class="exercise" aria-live="polite"></div>
+        <div class="navigation">
+          <button id="previous-button" class="nav-button" type="button">← 上一个</button>
+          <button id="next-button" class="nav-button primary" type="button">下一个 →</button>
+        </div>
+      </section>
+
+      <section class="utility" aria-label="学习进度管理">
+        <div><strong>进度属于你</strong><p>保存在当前设备的浏览器中。换设备时，可以先导出，再在新设备导入。</p></div>
+        <div class="utility-actions">
+          <button id="export-button" type="button">导出进度</button>
+          <label class="import-button">导入进度<input id="import-input" type="file" accept="application/json,.json" hidden></label>
+        </div>
+      </section>
+    </main>
+    <footer>轻记单词 · 无需注册，免费使用</footer>
+  </div>
+  <script src="app.js" defer></script>
+</body>
+</html>
